@@ -1,3 +1,7 @@
+[![GitHub stars](https://img.shields.io/github/stars/jkerai1/TLD-TABL-Block?style=flat-square)](https://github.com/jkerai1/TLD-TABL-Block/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/jkerai1/TLD-TABL-Block?style=flat-square)](https://github.com/jkerai1/TLD-TABL-Block/network)
+[![GitHub issues](https://img.shields.io/github/issues/jkerai1/TLD-TABL-Block?style=flat-square)](https://github.com/jkerai1/TLD-TABL-Block/issues)
+[![GitHub pulls](https://img.shields.io/github/issues-pr/jkerai1/TLD-TABL-Block?style=flat-square)](https://github.com/jkerai1/TLD-TABL-Block/pulls)
 # TLD-TABL-Block
 Prevent emails containing URLs with abused TLDs with Tenant Allow Block List
 
