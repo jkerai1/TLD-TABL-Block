@@ -8,9 +8,25 @@ Prevent emails containing URLs with abused TLDs with Tenant Allow Block List
 Microsoft Documentation describing TLD blocking:  
 https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/tenant-allow-block-list-urls-configure?view=o365-worldwide#scenario-top-level-domain-blocking  
 
+# Example  
+
+![image](https://github.com/jkerai1/TLD-TABL-Block/assets/55988027/e1e82995-ff6d-4942-998c-e2b2594efe38)
+
 
 # Lists  
 
 Spamhaus List: https://github.com/cyb3rmik3/Hunting-Lists/  (original Source: https://www.spamhaus.org/statistics/tlds/)  
 
 InfoSec CA List: https://www.info-sec.ca/tld-block.txt
+
+
+#KQLs  
+
+https://www.kqlsearch.com/query/Topleveldomains&clmnymyzs00225i4sooju29dz
+
+EmailUrlInfo
+| extend FQDN = trim_end("(:|\\?).*", tostring(split(trim_start('http(.|)://', UrlDomain), "/")[0]))
+//| project-reorder FQDN, UrlDomain
+| where FQDN contains "."  // exclude singular hostnames used in local name resolution
+| extend TLD = tostring(split(FQDN, ".")[-1])
+| summarize count() by TLD
