@@ -20,7 +20,7 @@ Spamhaus List: https://github.com/cyb3rmik3/Hunting-Lists/  (original Source: ht
 InfoSec CA List: https://www.info-sec.ca/tld-block.txt
 
 
-#KQLs  
+# KQLs  
 
 https://www.kqlsearch.com/query/Topleveldomains&clmnymyzs00225i4sooju29dz
 
