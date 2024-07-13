@@ -15,18 +15,22 @@ https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/ten
 
 # Lists  
 
-Spamhaus List: https://github.com/cyb3rmik3/Hunting-Lists/  (original Source: https://www.spamhaus.org/statistics/tlds/)  
+[Spamhaus List](https://github.com/cyb3rmik3/Hunting-Lists/)  ([original Source](https://www.spamhaus.org/statistics/tlds/)) 
 
-InfoSec CA List: https://www.info-sec.ca/tld-block.txt
+[InfoSec CA List](https://www.info-sec.ca/tld-block.txt)
 
 
 # KQLs  
 
-https://www.kqlsearch.com/query/Topleveldomains&clmnymyzs00225i4sooju29dz
-
+[KQL Search](https://www.kqlsearch.com/query/Topleveldomains&clmnymyzs00225i4sooju29dz)
+```
 EmailUrlInfo
 | extend FQDN = trim_end("(:|\\?).*", tostring(split(trim_start('http(.|)://', UrlDomain), "/")[0]))
 //| project-reorder FQDN, UrlDomain
 | where FQDN contains "."  // exclude singular hostnames used in local name resolution
 | extend TLD = tostring(split(FQDN, ".")[-1])
 | summarize count() by TLD
+```
+# See More
+
+[Block TLDs in Windows Firewall via Intune](https://jeffreyappel.nl/block-gtld-zip-fqdn-domains-with-windows-firewall-and-defender-for-endpoint)  
