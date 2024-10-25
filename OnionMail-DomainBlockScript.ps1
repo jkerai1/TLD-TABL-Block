@@ -5,6 +5,6 @@ $BlockList = Invoke-WebRequest -URI 'https://raw.githubusercontent.com/jkerai1/T
 foreach($line in $BlockList.Split([Environment]::NewLine)){
     Write-Host($line)
     if (-Not $line.StartsWith("#")){
-        New-TenantAllowBlockListItems -ListType Url -Block -Entries $line -NoExpiration -Notes "OnionMail"
+        New-TenantAllowBlockListItems -ListType Sender -Block -Entries $line -NoExpiration -Notes "OnionMail"
         }
 }
