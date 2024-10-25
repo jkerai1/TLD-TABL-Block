@@ -31,12 +31,20 @@ EmailUrlInfo
 | extend TLD = tostring(split(FQDN, ".")[-1])
 | summarize count() by TLD
 ```
-> Onion Mail  
+Onion Mail  
 ```
 let OnionMailAddresses = externaldata (onionmail: string) [@'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/OnionMail.txt'] with (format=csv, ignoreFirstRecord=True);
 EmailEvents
 | where SenderFromDomain has_any (OnionMailAddresses)
 
+```
+Cockli  
+```
+
+let CockLiMailAddresses = externaldata (cocklimail: string) [@'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/cockli-abused-Email-domains.txt'] with (format=csv, ignoreFirstRecord=True);
+CockLiMailAddresses
+EmailEvents
+| where SenderFromDomain has_any (CockLiMailAddresses)
 ```
 # See More
 
