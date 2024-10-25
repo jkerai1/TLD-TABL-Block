@@ -1,0 +1,10 @@
+Import-Module ExchangeOnlineManagement
+Connect-ExchangeOnline
+$BlockList = Invoke-WebRequest -URI 'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/OnionMail.txt'| Select -expand Content
+
+foreach($line in $BlockList.Split([Environment]::NewLine)){
+    Write-Host($line)
+    if (-Not $line.StartsWith("#")){
+        New-TenantAllowBlockListItems -ListType Url -Block -Entries $line -NoExpiration -Notes "OnionMail"
+        }
+}
