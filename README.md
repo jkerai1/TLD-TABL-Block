@@ -40,7 +40,6 @@ EmailEvents
 ```
 Cockli  
 ```
-
 let CockLiMailAddresses = externaldata (cocklimail: string) [@'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/cockli-abused-Email-domains.txt'] with (format=csv, ignoreFirstRecord=True);
 CockLiMailAddresses
 EmailEvents
