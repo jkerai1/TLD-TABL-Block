@@ -31,6 +31,13 @@ EmailUrlInfo
 | extend TLD = tostring(split(FQDN, ".")[-1])
 | summarize count() by TLD
 ```
+> Onion Mail  
+```
+let OnionMailAddresses = externaldata (onionmail: string) [@'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/OnionMail.txt'] with (format=csv, ignoreFirstRecord=True);
+EmailEvents
+| where SenderFromDomain has_any (OnionMailAddresses)
+
+```
 # See More
 
 [Block TLDs in Windows Firewall via Intune](https://jeffreyappel.nl/block-gtld-zip-fqdn-domains-with-windows-firewall-and-defender-for-endpoint)  
