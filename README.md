@@ -33,14 +33,14 @@ EmailUrlInfo
 ```
 Onion Mail  
 ```
-let OnionMailAddresses = externaldata (onionmail: string) [@'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/OnionMail.txt'] with (format=csv, ignoreFirstRecord=True);
+let OnionMailAddresses = externaldata (onionmail: string) [@'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/OnionMail.txt'] with (format=csv, ignoreFirstRecord=False);
 EmailEvents
 | where SenderFromDomain has_any (OnionMailAddresses)
 
 ```
 Cockli  
 ```
-let CockLiMailAddresses = externaldata (cocklimail: string) [@'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/cockli-abused-Email-domains.txt'] with (format=csv, ignoreFirstRecord=True);
+let CockLiMailAddresses = externaldata (cocklimail: string) [@'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/cockli-abused-Email-domains.txt'] with (format=csv, ignoreFirstRecord=False);
 CockLiMailAddresses
 EmailEvents
 | where SenderFromDomain has_any (CockLiMailAddresses)
