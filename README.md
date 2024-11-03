@@ -20,7 +20,7 @@ https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/ten
 [InfoSec CA List](https://www.info-sec.ca/tld-block.txt)
 
 
-# Exchange Transport Rule For Senders Example - Modify as Apprioprate
+# Exchange Transport Rule For Senders Example - Modify as appropriate
 
 Pattern: Includes these patterns in the From address: '\.(af|be|br|cn|ee|de|hu|ir|iq|it|jm|lv|lb|lt|kp|md|mm|nl|pl|ro|ru|kn|sy|tr|ua|uy|zip|top)$'  
 
