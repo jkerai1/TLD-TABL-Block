@@ -26,6 +26,13 @@ Pattern: Includes these patterns in the From address: '\.(af|be|br|cn|ee|de|hu|i
 
 ![image](https://github.com/user-attachments/assets/bf41bdc4-70aa-4a5f-bf6d-ca23b405b95c)
 
+# Remote Domains Example  
+
+Extra layer against autoforwarding persistence attack  
+
+![image](https://github.com/user-attachments/assets/89f7d919-0e9d-4543-8f6a-91fdbe866f00)
+
+![image](https://github.com/user-attachments/assets/cc422091-94a8-4d71-a148-502b9871bb91)  
 
 # KQLs  
 
