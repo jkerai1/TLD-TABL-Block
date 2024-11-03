@@ -20,6 +20,13 @@ https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/ten
 [InfoSec CA List](https://www.info-sec.ca/tld-block.txt)
 
 
+# Exchange Transport Rule For Senders Example - Modify as Apprioprate
+
+Pattern: Includes these patterns in the From address: '\.(af|be|br|cn|ee|de|hu|ir|iq|it|jm|lv|lb|lt|kp|md|mm|nl|pl|ro|ru|kn|sy|tr|ua|uy|zip|top)$'  
+
+![image](https://github.com/user-attachments/assets/bf41bdc4-70aa-4a5f-bf6d-ca23b405b95c)
+
+
 # KQLs  
 
 [KQL Search](https://www.kqlsearch.com/query/Topleveldomains&clmnymyzs00225i4sooju29dz)
