@@ -1,4 +1,4 @@
-Install-Module ExchangeOnlineManagement
+#Install-Module ExchangeOnlineManagement
 Import-Module ExchangeOnlineManagement
 Connect-ExchangeOnline
 $BlockList = Invoke-WebRequest -URI 'https://www.info-sec.ca/tld-block.txt'| Select -expand Content
