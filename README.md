@@ -26,7 +26,7 @@ After releasing this repo I decided to add functionality to block sender domains
 Currently these include:
 - OnionMail
 - CockLi
-- Temp Email Addresses
+- Temp Email Addresses (list heavily based of https://github.com/disposable/disposable)
 
 > This will **ONLY** block the Sender Domain and not emails containing URL, however I leave this to the viewer you'd just need to copy the functionality from the TLD TABL Url Script.
 
