@@ -5,7 +5,7 @@ $BlockList = Invoke-WebRequest -URI 'https://raw.githubusercontent.com/jkerai1/T
 
 foreach($line in $BlockList.Split("`n")){
     Write-Host($line)
-    if (-Not $line.StartsWith("#")){
+    if (-Not $line.StartsWith("#") -And ($line.Length -ge 2)){
         New-TenantAllowBlockListItems -ListType Sender -Block -Entries $line -NoExpiration -Notes "Temporary Email"
         }
 }
