@@ -12,13 +12,23 @@ https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/ten
 
 ![image](https://github.com/jkerai1/TLD-TABL-Block/assets/55988027/e1e82995-ff6d-4942-998c-e2b2594efe38)
 
-
 # Lists  
 
 [Spamhaus List](https://github.com/cyb3rmik3/Hunting-Lists/)  ([original Source](https://www.spamhaus.org/statistics/tlds/)) 
 
 [InfoSec CA List](https://www.info-sec.ca/tld-block.txt)
 
+
+# Sender Domains  
+
+After releasing this repo I decided to add functionality to block sender domains too in TABL
+
+Currently these include:
+- OnionMail
+- CockLi
+- Temp Email Addresses
+
+> This will ONLY block the Sender Domain and not emails containing URL, however I leave this to the viewer you'd just need to copy the functionality from the TLD TABL Url Script.
 
 # Exchange Transport Rule For Senders Example - Modify as appropriate
 
@@ -50,7 +60,6 @@ Onion Mail
 let OnionMailAddresses = externaldata (onionmail: string) [@'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/OnionMail.txt'] with (format=csv, ignoreFirstRecord=False);
 EmailEvents
 | where SenderFromDomain has_any (OnionMailAddresses)
-
 ```
 Cockli  
 ```
@@ -58,6 +67,13 @@ let CockLiMailAddresses = externaldata (cocklimail: string) [@'https://raw.githu
 CockLiMailAddresses
 EmailEvents
 | where SenderFromDomain has_any (CockLiMailAddresses)
+```
+Temp Mail
+```
+let TempEmailAddresses = externaldata (mail: string) [@'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/tempmail-abused%20emaildomains.txt'] with (format=csv, ignoreFirstRecord=False);
+EmailEvents
+| where TimeGenerated > ago(90d)
+| where SenderFromDomain has_any (TempEmailAddresses) or RecipientEmailAddress has_any(TempEmailAddresses)
 ```
 # See More
 
