@@ -31,6 +31,8 @@ Currently these include:
 > This will ONLY block the Sender Domain and not emails containing URL, however I leave this to the viewer you'd just need to copy the functionality from the TLD TABL Url Script.
 
 # Exchange Transport Rule For Senders Example - Modify as appropriate
+> As TLD is not supported in TABL for sender domains (only URLs) we can leverage an exchange Transport Rule to catch abused TLDs  
+!TODO add a script here?
 
 Pattern: Includes these patterns in the From address: '\.(af|be|br|cn|ee|de|hu|ir|iq|it|jm|lv|lb|lt|kp|md|mm|nl|pl|ro|ru|kn|sy|tr|ua|uy|zip|top)$'  
 
