@@ -28,7 +28,12 @@ Currently these include:
 - CockLi
 - Temp Email Addresses
 
-> This will ONLY block the Sender Domain and not emails containing URL, however I leave this to the viewer you'd just need to copy the functionality from the TLD TABL Url Script.
+> This will **ONLY** block the Sender Domain and not emails containing URL, however I leave this to the viewer you'd just need to copy the functionality from the TLD TABL Url Script.
+
+The Temp Email list is large, I would **only** recommend deploying this if you have Defender for Office P2 as it exceeds the limit for plan 1.  
+
+"Defender for Office 365 Plan 2: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000 (15000 domain and email address entries in total)."  
+> Ref https://learn.microsoft.com/en-us/defender-office-365/tenant-allow-block-list-email-spoof-configure?view=o365-worldwide#what-do-you-need-to-know-before-you-begin
 
 # Exchange Transport Rule For Senders Example - Modify as appropriate
 > As TLD is not supported in TABL for sender domains (only URLs) we can leverage an exchange Transport Rule to catch abused TLDs  
