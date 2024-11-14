@@ -84,3 +84,9 @@ EmailEvents
 # See More
 
 [Block TLDs in Windows Firewall via Intune](https://jeffreyappel.nl/block-gtld-zip-fqdn-domains-with-windows-firewall-and-defender-for-endpoint)  
+
+![image](https://github.com/user-attachments/assets/64251c0a-3048-43ff-80d0-0619fc632ac7)
+
+![image](https://github.com/user-attachments/assets/ab0a4dc5-5dd3-41cc-86f1-45ac81883b94)
+
+![image](https://github.com/user-attachments/assets/f826253f-3eff-47fa-81a4-54239aa52f0c)
