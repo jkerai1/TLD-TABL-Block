@@ -17,7 +17,7 @@ https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/ten
 [Spamhaus List](https://github.com/cyb3rmik3/Hunting-Lists/)  ([original Source](https://www.spamhaus.org/statistics/tlds/)) 
 
 [InfoSec CA List](https://www.info-sec.ca/tld-block.txt)
-
+> Run [KQLs](https://github.com/jkerai1/TLD-TABL-Block?tab=readme-ov-file#kqls) first before deploying to minimize business impact  
 
 # Sender Domains  
 
