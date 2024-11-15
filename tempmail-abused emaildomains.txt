@@ -1,5 +1,6 @@
 fedora.email
 passinbox.com
+passmail.net
 cironex.com
 moneychair.org
 anypng.com
