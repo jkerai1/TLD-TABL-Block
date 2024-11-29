@@ -80,6 +80,7 @@ let TempEmailAddresses = externaldata (mail: string) [@'https://raw.githubuserco
 EmailEvents
 | where TimeGenerated > ago(90d)
 | where SenderFromDomain has_any (TempEmailAddresses) or RecipientEmailAddress has_any(TempEmailAddresses)
+//| join kind=leftouter EmailUrlInfo on NetworkMessageId
 //| summarize make_list(Url) by NetworkMessageId,SenderFromAddress, RecipientEmailAddress, Subject, AttachmentCount, UrlCount
 ```
 # See More
