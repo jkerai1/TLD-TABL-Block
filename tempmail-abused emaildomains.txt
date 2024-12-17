@@ -1,5 +1,4 @@
 fedora.email
-hoped.me
 docking.info
 indesign.wiki
 buystockservices.pro
@@ -53,7 +52,6 @@ jaywhit.top
 onmail.com
 omail.edu.pl
 justdied.com
-trap-mail.de
 woeishyang.com
 cyber-security.lat
 water-damage.xyz
@@ -1325,7 +1323,6 @@ emaildienst.de
 emaildrop.io
 emailfake.com
 emailfake.ml
-emailfoxi.pro
 emailfreedom.ml
 emailgenerator.de
 emailgo.de
