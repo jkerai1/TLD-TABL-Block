@@ -55,7 +55,10 @@ Extra layer against autoforwarding persistence attack
 
 # KQLs  
 
-[KQL Search](https://www.kqlsearch.com/query/Topleveldomains&clmnymyzs00225i4sooju29dz)
+[Connections to abused TLDs -KQL Search](https://www.kqlsearch.com/query/Topleveldomains&clmnymyzs00225i4sooju29dz)
+
+Emails by TLD  
+
 ```
 EmailUrlInfo
 | extend FQDN = trim_end("(:|\\?).*", tostring(split(trim_start('http(.|)://', UrlDomain), "/")[0]))
