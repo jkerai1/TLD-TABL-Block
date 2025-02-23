@@ -56,6 +56,7 @@ Extra layer against autoforwarding persistence attack
 # KQLs  
 
 [Connections to abused TLDs -KQL Search](https://www.kqlsearch.com/query/Topleveldomains&clmnymyzs00225i4sooju29dz)
+[TLD Count](https://github.com/jkerai1/KQL-Queries/blob/main/Defender/TLD%20by%20Count%20for%20DeviceNetworkEvents.kql)
 
 Emails by TLD  
 
