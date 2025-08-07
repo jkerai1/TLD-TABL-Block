@@ -38,8 +38,8 @@ The Temp Email list is large, I would **only** recommend deploying this if you h
 > Ref https://learn.microsoft.com/en-us/defender-office-365/tenant-allow-block-list-email-spoof-configure?view=o365-worldwide#what-do-you-need-to-know-before-you-begin
 
 # Exchange Transport Rule For Senders Example - Modify as appropriate
-> As TLD is not supported in TABL for sender domains (only URLs) we can leverage an exchange Transport Rule to catch abused TLDs  
-!TODO add a script here?
+> TLDs are now supported for Domain Senders in TABL so I would recommend using that instead and not using the Exchange Transport for anything other than auditing Ref :https://learn.microsoft.com/en-us/defender-office-365/tenant-allow-block-list-email-spoof-configure#what-do-you-need-to-know-before-you-begin <img width="1082" height="117" alt="image" src="https://github.com/user-attachments/assets/750265ec-76f0-418a-9060-c52f2d5b1821" />
+
 
 Pattern: Includes these patterns in the From address: '\.(af|be|br|cn|ee|de|hu|ir|iq|it|jm|lv|lb|lt|kp|md|mm|nl|pl|ro|ru|kn|sy|tr|ua|uy|zip|top)$'  
 
