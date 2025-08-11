@@ -54,11 +54,12 @@ Extra layer against autoforwarding persistence attack
 ![image](https://github.com/user-attachments/assets/cc422091-94a8-4d71-a148-502b9871bb91)  
 
 # KQLs  
+> Many of my KQLs are already on [KQLsearch](https://www.kqlsearch.com/)
 
 [Connections to abused TLDs -KQL Search](https://www.kqlsearch.com/query/Topleveldomains&clmnymyzs00225i4sooju29dz)  
 [TLD Count](https://github.com/jkerai1/KQL-Queries/blob/main/Defender/TLD%20by%20Count%20for%20DeviceNetworkEvents.kql)
 
-Emails by TLD  
+Emails by TLD (URLs)  
 
 ```
 EmailUrlInfo
@@ -67,6 +68,18 @@ EmailUrlInfo
 | where FQDN contains "."  // exclude singular hostnames used in local name resolution
 | extend TLD = tostring(split(FQDN, ".")[-1])
 | summarize count() by TLD
+```
+
+Emails by TLD (Senders)  
+
+```
+EmailEvents
+| extend FQDN = trim_end("(:|\\?).*", tostring(split(trim_start('http(.|)://', SenderFromDomain), "/")[0]))
+//| project-reorder FQDN, UrlDomain
+| where FQDN contains "."  // exclude singular hostnames used in local name resolution
+| where DeliveryAction == "Delivered"
+| extend TLD = tostring(split(FQDN, ".")[-1])
+| summarize count() by TLD, EmailDirection
 ```
 Onion Mail  
 ```
