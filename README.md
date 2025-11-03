@@ -14,6 +14,12 @@ https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/ten
 
 ![image](https://github.com/user-attachments/assets/69a5971c-8f69-45b4-8b27-9e419cb8ffa6)
 
+**Update**
+TLDs now supported for senders:  
+
+<img width="1174" height="1021" alt="image" src="https://github.com/user-attachments/assets/258d0db5-538f-4fc7-917f-b21a9f0bb12c" />  
+
+
 # Lists  
 
 [Spamhaus List](https://github.com/cyb3rmik3/Hunting-Lists/)  ([original Source](https://www.spamhaus.org/statistics/tlds/)) 
