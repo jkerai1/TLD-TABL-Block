@@ -116,6 +116,9 @@ EmailEvents
 
 ![image](https://github.com/user-attachments/assets/ab0a4dc5-5dd3-41cc-86f1-45ac81883b94)
 
+>[!TIP]
+>Rather than creating this list manually in Intune, you can import this [Intune Reusable Settings Template](/Intune-Reusable-Settings/AbusedTLDs.json) using [IntuneManagement](https://github.com/Micke-K/IntuneManagement)
+
 ![image](https://github.com/user-attachments/assets/4969046c-d914-4151-912f-143ffadaa42f)
 
 ![image](https://github.com/user-attachments/assets/f826253f-3eff-47fa-81a4-54239aa52f0c)
