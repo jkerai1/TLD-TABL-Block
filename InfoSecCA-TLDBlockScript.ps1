@@ -2,7 +2,7 @@
 Import-Module ExchangeOnlineManagement
 Connect-ExchangeOnline
 
-$BlockList = Invoke-WebRequest -URI 'https://www.info-sec.ca/tld-block.txt' | Select -expand Content
+$BlockList = Invoke-WebRequest -URI 'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/Abused%20TLDs.txt' | Select -expand Content
 $exclusion = @('info','example')
 
 foreach($line in $BlockList.Split([Environment]::NewLine)){
@@ -15,6 +15,6 @@ foreach($line in $BlockList.Split([Environment]::NewLine)){
         
         Write-Host($trimmedLine)
         $TLD = "*." + $trimmedLine
-        New-TenantAllowBlockListItems -ListType Sender -Block -Entries $TLD -NoExpiration -Notes "Blocked TLD https://www.info-sec.ca/tld-block.txt"
+        New-TenantAllowBlockListItems -ListType Sender -Block -Entries $TLD -NoExpiration -Notes "Blocked TLD https://github.com/jkerai1/TLD-TABL-Block/tree/main"
     }
 }
