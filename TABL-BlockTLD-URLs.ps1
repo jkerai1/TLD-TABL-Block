@@ -3,7 +3,7 @@ Import-Module ExchangeOnlineManagement
 Connect-ExchangeOnline
 
 # Fetch raw TLD list (fixed URL, no trailing spaces)
-$BlockList = Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/BadTLDs.txt' -UseBasicParsing | Select-Object -ExpandProperty Content
+$BlockList = Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/LargerCombinedBadTLDs.txt' -UseBasicParsing | Select-Object -ExpandProperty Content
 
 $exclusion = @('info', 'example')
 
