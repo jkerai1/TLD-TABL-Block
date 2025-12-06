@@ -298,7 +298,6 @@ world
 ws
 wtf
 xin
-kg
 xyz
 yachts
 yoga
