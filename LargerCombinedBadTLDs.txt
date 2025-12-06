@@ -80,9 +80,7 @@ discount
 diy
 dog
 download
-dpdns.org
 eco
-edu.eu
 email
 engineer
 enterprises
@@ -235,7 +233,6 @@ rip
 rodeo
 ru
 ryukyu
-sa.com
 sale
 sbs
 schule
@@ -279,7 +276,7 @@ tt
 tube
 tz
 uno
-us.kg
+kg
 vacations
 vegas
 ventures
@@ -301,12 +298,11 @@ world
 ws
 wtf
 xin
-xx.kg
+kg
 xyz
 yachts
 yoga
 you
-za.com
 zip
 zm
 zone
