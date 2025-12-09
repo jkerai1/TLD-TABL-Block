@@ -1,6 +1,12 @@
 # This PowerShell Script requires ExchangeOnlineManagement Module.
 # It will add a disclaimer to emails from personal email domains. The transport rule is created in a DISABLED state.
 
+#If you need to install the module uncomment the line below
+#Install-Module ExchangeOnlineManagement 
+
+Import-Module ExchangeOnlineManagement
+Connect-ExchangeOnline
+
 # URL containing the list of public email domains
 $DomainListUrl = "https://raw.githubusercontent.com/cricci/public_email_domains/refs/heads/main/public_email_domains-WORKING"
 
