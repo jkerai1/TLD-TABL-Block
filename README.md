@@ -51,6 +51,18 @@ Pattern: Includes these patterns in the From address: '\.(af|be|br|cn|ee|de|hu|i
 
 ![image](https://github.com/user-attachments/assets/bf41bdc4-70aa-4a5f-bf6d-ca23b405b95c)
 
+# Exchange Transport Rule to warn of personal email domains
+Consider making a rule to warn users of this type of email
+
+<img width="400" height="653" alt="firefox_XWc0ms48vF" src="https://github.com/user-attachments/assets/b42b253b-e8c3-4864-a1e1-6d8b871f4732" />
+
+You can use this [PowerShell Script](EOL-AppendDislaimerFromPersonalMailDomains.ps1) to quickly create this rule, the outcome is shown below (and displays on mobile).
+
+(Thanks to [cricci](https://github.com/cricci/public_email_domains/tree/main) for the source list.)
+
+<img width="900" height="592" alt="CustomTransportRule" src="https://github.com/user-attachments/assets/8fee2d37-44c2-4e72-b2c0-b4937ab452a1" />
+
+
 # Remote Domains Example  
 
 Extra layer against autoforwarding persistence attack  
