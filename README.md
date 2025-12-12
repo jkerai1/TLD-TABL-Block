@@ -127,7 +127,11 @@ EmailEvents
 An Attacker can abuse microsoft invite messages (and their tenant names) to send invites to users claiming they need to call microsoft billing (an example of a TOAD attack). While blocking External B2B can be done in Entra this attack doesn't require the user to actually accept the invite. The idea is that because the invitations come from a legitimate Microsoft Address (invites@microsoft.com), it won't look like a phish and the user will pick up the phone and call the number. These invitations can be blocked with an exchange transport rule.
 See more about this attack [here](https://cybersecuritynews.com/hackers-leverages-microsoft-entra-tenant-invitations/): 
 
-<img width="844" height="1067" alt="image" src="https://github.com/user-attachments/assets/e7075765-24c0-42a5-bef8-fb252b9f7eaf" />
+Pattern ```Domain:\s+([A-Za-z0-9]+)\.onmicrosoft\.com```  
+
+<img width="742" height="979" alt="image" src="https://github.com/user-attachments/assets/8162377a-5426-4821-b4d3-d5ab9c1841e0" />
+
+
 > Some Contractors who use their own tenant may have not set the correct primary domain on their tenant so they may need to be excluded from rule or informed to correct the primary domain on their tenant
 
 # See More
