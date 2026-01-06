@@ -120,7 +120,17 @@ EmailEvents
 //| join kind=leftouter EmailUrlInfo on NetworkMessageId
 //| summarize make_list(Url) by NetworkMessageId,SenderFromAddress, RecipientEmailAddress, Subject, AttachmentCount, UrlCount
 ```
-
+Emails from Abused TLDs
+```
+let AbusedTLDs = externaldata(TLD: string)[@"https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/LargerCombinedBadTLDs.txt"] with (format="csv", ignoreFirstRecord=false);
+EmailEvents
+| where Timestamp > ago(30d)
+| where isnotempty(SenderFromAddress)
+| extend SenderDomain = tostring(split(SenderFromAddress, "@")[1])
+| extend SenderTLD = tostring(split(SenderDomain, ".")[-1])
+| where SenderTLD in (AbusedTLDs)
+| project Timestamp, SenderFromAddress, SenderDomain, SenderTLD, RecipientEmailAddress, DeliveryAction, DeliveryLocation
+```
 
 # Blocking Invitations from .onmicrosoft.com domains
 
