@@ -1,6 +1,6 @@
 #Install-Module ExchangeOnlineManagement
 Import-Module ExchangeOnlineManagement
-Connect-ExchangeOnline
+Connect-ExchangeOnline -ShowBanner:$false
 $BlockList = Invoke-WebRequest -URI 'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/cockli-abused-Email-domains.txt'| Select -expand Content
 
 foreach($line in $BlockList.Split("`n")){
