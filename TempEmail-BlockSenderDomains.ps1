@@ -1,6 +1,6 @@
 #Install-Module ExchangeOnlineManagement
 Import-Module ExchangeOnlineManagement
-Connect-ExchangeOnline
+Connect-ExchangeOnline -ShowBanner:$false
 $exclusion = @('example.com')
 $BlockList = Invoke-WebRequest -URI 'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/tempmail-abused%20emaildomains.txt'| Select -expand Content
 
