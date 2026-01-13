@@ -1,6 +1,6 @@
 #Install-Module ExchangeOnlineManagement
 Import-Module ExchangeOnlineManagement
-Connect-ExchangeOnline
+Connect-ExchangeOnline -ShowBanner:$false
 
 # Fetch raw TLD list
 $BlockList = Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/jkerai1/TLD-TABL-Block/refs/heads/main/LargerCombinedBadTLDs.txt' -UseBasicParsing | Select-Object -ExpandProperty Content
