@@ -1,6 +1,6 @@
 #Install-Module ExchangeOnlineManagement
 Import-Module ExchangeOnlineManagement
-Connect-ExchangeOnline
+Connect-ExchangeOnline -ShowBanner:$false
 $BlockList = Invoke-WebRequest -URI 'https://raw.githubusercontent.com/cyb3rmik3/Hunting-Lists/main/spamhaus-abused-tlds.csv'| Select -expand Content
 
 foreach($line in $BlockList.Split([Environment]::NewLine)){
