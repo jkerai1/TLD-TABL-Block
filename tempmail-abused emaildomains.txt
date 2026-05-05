@@ -1,3 +1,5 @@
+atomicmail.io
+mailfence.com
 fedora.email
 docking.info
 indesign.wiki
